@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <!-- MAY NEED TO USE VIEW PORT HERE SO IT LOOKS CORRECT ON MOBILE DEVICES -->
 <title>Bus Sighted Mobile App</title>
     <!-- replace these with links to local -->
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
@@ -11,25 +13,99 @@
 <body>
 
 	<div data-role="page">
-	
-		<div data-role="header">
-			<h1>hello</h1>
-		</div>
+	    <div data-role="header" data-theme='a'>
+            <h1>Logo</h1>
+        </div>
         <div data-role="content">
-			<p>hello</p>
-		</div>
 
-        <div data-role="footer">
-			<h4>page footer</h4>
-		</div>
-		
-		
-		
-		
-		
+            <h1>Is this your current location</h1>
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#enter-destination" data-role="button" data-transition="slide">Yes</a></li>
+                    <li><a href="#enter-current-location" data-role="button">No</a></li>
+                </ul>
+            </div>
+        </div>
 	</div>
 
-hello
+    <div data-role="page" id="enter-current-location">
+        <div data-role="header">
+            <h1>Logo</h1>
+        </div>
+        <div data-role="content">
+            <h2>Enter Start Location</h2>
+            <form>
+                <label for="textinput-s">Enter Start Location : </label>
+                <!-- Use List View for this -->
+                <input type="text" name="textinput-s" id="textinput-s" placeholder="Text input" value="" data-clear-btn="true">
+            </form>
+            <a href="#enter-destination" data-role="button">Ok</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="enter-destination">
+        <div data-role="header">
+            <h1>Logo</h1>
+        </div>
+        <div data-role="content">
+            <h2>Enter Destination</h2>
+            <form>
+                <label for="textinput-s">Enter Destination : </label>
+                <!-- Use List View for this -->
+                <input type="text" name="textinput-p" id="textinput-p" placeholder="Text input" value="" data-clear-btn="true">
+            </form>
+            <a href="#preview" data-role="button">Preview</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="preview">
+        <div data-role="header">
+            <h1>Logo</h1>
+        </div>
+        <div data-role="content">
+
+
+
+            <a href="hello" data-role="button">Go!</a>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="page1">
+        <div data-role="header" data-theme='b'>
+            <h1>Page 1</h1>
+        </div>
+    </div>
+    <div data-role="content">
+
+    </div>
+
+    <div data-role="footer">
+
+    </div>
+
+    <div data-role="page" id="2">
+        <div data-role="header" data-theme='b'>
+
+            <a href="hello" data-icon="delete">CANCEL</a>
+            <h1>hello</h1>
+            <a href="hello" data-icon="delete">CANCEL</a>
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" data-role="button" data-transition="slide">Page 1</a></li>
+                    <li><a href="#page2" data-role="button">Page 2</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            <a href="#page3" data-role="button">Page Bean 3</a>
+        </div>
+        <div data-role="footer">
+            <h4>page footer</h4>
+        </div>
+    </div>
 
 </body>
 
