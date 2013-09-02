@@ -1,4 +1,27 @@
 
+function initializeGoogleMap() {
+    console.log('initialize');
+
+//    var lat = 51.508596;
+//    var lng = -0.117416;
+//
+//    var mapOptions = {
+//        center: new google.maps.LatLng(lat, lng),
+//        zoom: 12,
+//        sensors:false,
+//        mapTypeId: google.maps.MapTypeId.ROADMAP
+//    };
+//    map = new google.maps.Map(document.getElementById("map-canvas"),
+//        mapOptions);
+
+    $(function() {
+        // Also works with: var yourStartLatLng = '59.3426606750, 18.0736160278';
+        var yourStartLatLng = new google.maps.LatLng(59.3426606750, 18.0736160278);
+        $('#map-canvas').gmap({'center': yourStartLatLng});
+    });
+}
+
+
 function initilise(){
     setLocation();
 }
@@ -39,4 +62,4 @@ function displayError(error) {
     alert("Error: " + errors[error.code]);
 }
 
-initilise();
+initializeGoogleMap();
